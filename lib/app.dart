@@ -23,7 +23,7 @@ class App extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'App',
-          theme: lightTheme,
+          theme: lightTheme(context),
           navigatorKey: locator<NavigationHandler>().navigatorKey,
           onGenerateRoute: RouteGenerator.onGenerateRoute,
           initialRoute: Routes.splashScreenViewRoute,
