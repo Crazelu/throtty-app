@@ -12,6 +12,7 @@ ThemeData lightTheme(BuildContext context) => ThemeData(
       primaryColorLight: _primaryColorLight,
       primaryColorDark: const Color(0xff424242),
       errorColor: const Color(0xffFF3C3C),
+      backgroundColor: _primaryColorLight,
       scaffoldBackgroundColor: _primaryColorLight,
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: _primaryColor,
