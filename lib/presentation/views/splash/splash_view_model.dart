@@ -14,7 +14,7 @@ class SplashViewModel extends BaseViewModel {
   Future<void> navigate() async {
     if (isOnboardingComplete) {
       //check if user is logged in
-      await navigationHandler.pushReplacementNamed(Routes.onboardingViewRoute);
+      await navigationHandler.pushReplacementNamed(Routes.signupViewRoute);
     } else {
       navigationHandler.pushReplacementNamed(Routes.onboardingViewRoute);
     }

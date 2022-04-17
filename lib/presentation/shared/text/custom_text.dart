@@ -41,6 +41,17 @@ class CustomText extends StatelessWidget {
     );
   }
 
+  factory CustomText.h2({
+    required String text,
+    Color? color,
+  }) {
+    return CustomText(
+      text: text,
+      color: color,
+      style: TextStyles.h2TextStyle,
+    );
+  }
+
   factory CustomText.h3({
     required String text,
     Color? color,

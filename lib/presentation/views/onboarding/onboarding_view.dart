@@ -38,7 +38,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   children: [
                     Image.asset(
                       AppAssets.linkIllustration,
-                      height: 345.h,
+                      height: 510.h,
                       width: 510.w,
                       fit: BoxFit.fitWidth,
                     ),
@@ -47,7 +47,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                 ),
               ),
               Positioned.fill(
-                top: 250.h,
+                top: 400.h,
                 child: PageView(
                   controller: controller,
                   physics: const NeverScrollableScrollPhysics(),

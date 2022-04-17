@@ -5,7 +5,7 @@ import 'package:throtty/handlers/handlers.dart';
 import 'package:throtty/presentation/dialogs/dialog_generator.dart';
 import 'package:throtty/presentation/routes/route_generator.dart';
 import 'package:throtty/presentation/routes/routes.dart';
-import 'package:throtty/presentation/themes/light_theme.dart';
+import 'package:throtty/presentation/style/themes/light_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/di.dart';
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 630),
+      designSize: const Size(390, 861),
       builder: () => DialogManager(
         dialogKey: locator<DialogHandler>().dialogKey,
         navigatorKey: locator<NavigationHandler>().navigatorKey,

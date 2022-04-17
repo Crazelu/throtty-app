@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:throtty/presentation/shared/shared.dart';
+import 'package:throtty/presentation/style/palette.dart';
 import 'package:throtty/presentation/views/onboarding/onboarding_view_model.dart';
 import 'package:throtty/presentation/views/onboarding/widgets/indicator.dart';
 
@@ -47,6 +48,7 @@ class OnboardingStep extends StatelessWidget {
           const Spacer(),
           CustomText.h1(
             text: title,
+            color: Palette.primaryColorLight,
           ),
           Gap(16.h),
           SizedBox(
@@ -54,6 +56,7 @@ class OnboardingStep extends StatelessWidget {
             child: CustomText.h3(
               text: description,
               textAlign: TextAlign.center,
+              color: Palette.primaryColorLight,
             ),
           ),
           const Spacer(),
@@ -73,6 +76,7 @@ class OnboardingStep extends StatelessWidget {
                     },
                     child: CustomText.h3(
                       text: index == 0 ? "Skip" : "Back",
+                      color: Palette.primaryColorLight,
                     ),
                   ),
                   const Spacer(),

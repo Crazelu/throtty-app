@@ -58,8 +58,8 @@ class ArcPainter extends CustomPainter {
         -math.pi * 1.5,
         false,
       );
-      path.moveTo(size.width / 2, 6.h);
-      path.lineTo(size.width / 2, 20.h);
+      path.moveTo(size.width / 2, 8.h);
+      path.lineTo(size.width / 2, 24.h);
       path.moveTo(size.width * .95, size.height * .68);
       path.lineTo(30.w, size.height * .68);
     }

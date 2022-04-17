@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:throtty/presentation/views/onboarding/step_arc.dart';
+import 'package:throtty/presentation/views/onboarding/widgets/step_arc.dart';
 
 class Indicator extends StatelessWidget {
   final int index;
@@ -17,13 +17,13 @@ class Indicator extends StatelessWidget {
     return ConstrainedBox(
       constraints: BoxConstraints(
         maxWidth: 74.w,
-        maxHeight: 54.h,
+        maxHeight: 84.h,
       ),
       child: Stack(
         children: [
           Positioned(
-            left: 5.w,
-            bottom: 9.h,
+            left: 4.w,
+            bottom: 4.h,
             child: StepArc(index: index),
           ),
           Positioned(
@@ -33,8 +33,8 @@ class Indicator extends StatelessWidget {
               onTap: onTap,
               behavior: HitTestBehavior.translucent,
               child: Container(
-                height: 52.h,
-                width: 52.w,
+                height: 54.h,
+                width: 54.w,
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColorLight,
                   shape: BoxShape.circle,
