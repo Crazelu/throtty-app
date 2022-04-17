@@ -25,5 +25,6 @@ Future<void> setupLocator({String baseApi = ''}) async {
   //Handlers
   locator
       .registerLazySingleton<NavigationHandler>(() => NavigationHandlerImpl());
+
   locator.registerLazySingleton<DialogHandler>(() => DialogHandlerImpl());
 }

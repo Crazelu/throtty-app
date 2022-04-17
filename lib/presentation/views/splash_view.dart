@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:throtty/presentation/shared/shared.dart';
 import 'package:throtty/utils/app_assets.dart';
 

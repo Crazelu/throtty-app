@@ -30,6 +30,30 @@ class CustomText extends StatelessWidget {
     );
   }
 
+  factory CustomText.h1({
+    required String text,
+    Color? color,
+  }) {
+    return CustomText(
+      text: text,
+      color: color,
+      style: TextStyles.h1TextStyle,
+    );
+  }
+
+  factory CustomText.h3({
+    required String text,
+    Color? color,
+    TextAlign? textAlign,
+  }) {
+    return CustomText(
+      text: text,
+      color: color,
+      textAlign: textAlign,
+      style: TextStyles.h3TextStyle,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Text(

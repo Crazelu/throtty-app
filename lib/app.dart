@@ -26,7 +26,7 @@ class App extends StatelessWidget {
           theme: lightTheme(context),
           navigatorKey: locator<NavigationHandler>().navigatorKey,
           onGenerateRoute: RouteGenerator.onGenerateRoute,
-          initialRoute: Routes.splashScreenViewRoute,
+          initialRoute: Routes.onboardingViewRoute,
           builder: (_, child) => ProviderScope(child: child!),
         ),
       ),
