@@ -5,9 +5,10 @@ import 'package:throtty/handlers/handlers.dart';
 import 'package:throtty/presentation/dialogs/dialog_generator.dart';
 import 'package:throtty/presentation/routes/route_generator.dart';
 import 'package:throtty/presentation/routes/routes.dart';
-import 'package:throtty/utils/locator.dart';
 import 'package:throtty/presentation/themes/light_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'core/di.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class App extends StatelessWidget {
           theme: lightTheme(context),
           navigatorKey: locator<NavigationHandler>().navigatorKey,
           onGenerateRoute: RouteGenerator.onGenerateRoute,
-          initialRoute: Routes.onboardingViewRoute,
+          initialRoute: Routes.splashScreenViewRoute,
           builder: (_, child) => ProviderScope(child: child!),
         ),
       ),

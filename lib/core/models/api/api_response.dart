@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:throtty/models/api/server_response.dart';
-import 'package:throtty/models/api/error/api_error_response.dart';
+import 'package:throtty/core/models/api/server_response.dart';
+import 'package:throtty/core/models/api/error/api_error_response.dart';
 import 'package:throtty/utils/parser_util.dart';
 
 class ApiResponse<T> extends Equatable {

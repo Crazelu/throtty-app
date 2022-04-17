@@ -1,14 +1,16 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:throtty/data/local/__local.dart';
+import 'package:throtty/core/data/local/__local.dart';
+import 'package:throtty/core/domain/__domains.dart';
 import 'package:throtty/handlers/handlers.dart';
 
 GetIt locator = GetIt.instance;
 
 ///Registers dependencies
 Future<void> setupLocator({String baseApi = ''}) async {
-  final sharedPreferences = await SharedPreferences.getInstance();
-  locator.registerSingleton(sharedPreferences);
+  locator.registerSingletonAsync<SharedPreferences>(
+      () => SharedPreferences.getInstance());
+  await locator.isReady<SharedPreferences>();
 
   //Local storage
   locator.registerLazySingleton<SecureStorage>(
@@ -19,6 +21,13 @@ Future<void> setupLocator({String baseApi = ''}) async {
     () => LocalCacheImpl(
       sharedPreferences: locator(),
       storage: locator(),
+    ),
+  );
+
+  //DOMAINS
+  locator.registerLazySingleton<AppDefaultsDomain>(
+    () => AppDefaultsDomainImpl(
+      locator(),
     ),
   );
 

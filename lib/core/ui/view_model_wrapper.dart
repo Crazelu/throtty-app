@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:throtty/presentation/view-models/base_view_model.dart';
+import 'package:throtty/core/ui/base_view_model.dart';
 
 class ViewModelWrapper<T extends BaseViewModel> extends StatelessWidget {
   final ProviderBase<T> provider;

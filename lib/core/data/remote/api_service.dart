@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:dartz/dartz.dart';
-import 'package:throtty/data/local/local_cache.dart';
-import 'package:throtty/models/api/error/api_error_response.dart';
-import 'package:throtty/models/api/server_response.dart';
+import 'package:throtty/core/data/local/local_cache.dart';
+import 'package:throtty/core/di.dart';
+import 'package:throtty/core/models/api/error/api_error_response.dart';
+import 'package:throtty/core/models/api/server_response.dart';
 import 'package:http/http.dart' as http;
-import 'package:throtty/utils/locator.dart';
 import 'package:throtty/utils/parser_util.dart';
 
 abstract class ApiService {

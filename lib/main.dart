@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:throtty/app.dart';
-import 'package:throtty/utils/locator.dart';
 
-void main() {
+import 'core/di.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setupLocator();
-  runApp(const App());
+  await setupLocator();
+  Future.delayed(const Duration(seconds: 2)).then((_) => runApp(const App()));
 }

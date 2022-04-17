@@ -1,5 +1,5 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:throtty/data/local/secure_storage.dart';
+import 'package:throtty/core/data/local/secure_storage.dart';
 import 'package:throtty/utils/logger.dart';
 
 class SecureStorageImpl implements SecureStorage {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:throtty/data/local/local_cache.dart';
-import 'package:throtty/data/local/secure_storage.dart';
+import 'package:throtty/core/data/local/local_cache.dart';
+import 'package:throtty/core/data/local/secure_storage.dart';
 import 'package:throtty/utils/logger.dart';
 
 class LocalCacheImpl implements LocalCache {

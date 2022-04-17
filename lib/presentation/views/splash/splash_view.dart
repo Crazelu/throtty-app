@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:throtty/presentation/shared/shared.dart';
+import 'package:throtty/presentation/views/splash/splash_view_model.dart';
 import 'package:throtty/utils/app_assets.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends ConsumerStatefulWidget {
   const SplashView({Key? key}) : super(key: key);
+
+  @override
+  ConsumerState<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends ConsumerState<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        ref.read(splashViewModelProvider).navigate();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
