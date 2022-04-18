@@ -6,8 +6,8 @@ import 'package:throtty/presentation/views/auth/widgets/or_divider.dart';
 import 'package:throtty/utils/app_assets.dart';
 import 'package:throtty/utils/extensions.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({Key? key}) : super(key: key);
+class LoginView extends StatelessWidget {
+  const LoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SignUpView extends StatelessWidget {
                 children: [
                   Center(
                     child: CustomText.h2(
-                      text: "Create Account",
+                      text: "Login",
                       color: Theme.of(context).primaryColor,
                     ),
                   ),
@@ -34,7 +34,7 @@ class SignUpView extends StatelessWidget {
                   ),
                   Gap(5.h),
                   CustomText.body(
-                    text: "Please fill in details to create a new account",
+                    text: "Please fill in details to login to your account",
                     color: Theme.of(context).primaryColorDark.withOpacity(.7),
                   ),
                   Gap(50.h),
@@ -48,15 +48,25 @@ class SignUpView extends StatelessWidget {
                   Gap(40.h),
                   CustomTextField(
                     label: "Password",
-                    hint: "Create a new password",
+                    hint: "Enter password",
                     fillColor: Theme.of(context).primaryColor.withOpacity(.05),
                     hintColor: Theme.of(context).primaryColor.withOpacity(.28),
                     borderColor: Theme.of(context).primaryColor,
                   ),
+                  Gap(10.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () {},
+                        child: CustomText.body(text: "Forgot password"),
+                      ),
+                    ],
+                  ),
                   Gap(50.h),
                   Center(
                     child: CustomButton(
-                      text: "Create a new account",
+                      text: "Login to account",
                       width: 195,
                       onPressed: () {},
                     ),
@@ -64,11 +74,11 @@ class SignUpView extends StatelessWidget {
                   Gap(40.h),
                   Center(
                     child: LongCtaText(
-                      longText: "Already have an account?",
-                      ctaText: "Login",
+                      longText: "Are you a new user?",
+                      ctaText: "Create account",
                       onCtaTapped: () {
                         Navigator.of(context)
-                            .pushReplacementNamed(Routes.loginViewRoute);
+                            .pushReplacementNamed(Routes.signupViewRoute);
                       },
                     ),
                   ),
@@ -81,7 +91,7 @@ class SignUpView extends StatelessWidget {
                 children: [
                   CustomOutlinedButton(
                     width: 214,
-                    text: "Sign up with Google",
+                    text: "Login with Google",
                     color: Theme.of(context).primaryColorDark,
                     prefix: ImageIcon(
                       const AssetImage(AppAssets.googleIcon),

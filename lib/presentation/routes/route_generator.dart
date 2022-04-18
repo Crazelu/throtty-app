@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:throtty/presentation/routes/routes.dart';
-import 'package:throtty/presentation/views/auth/sign_up_view.dart';
 import 'package:throtty/presentation/views/views.dart';
 
 class RouteGenerator {
@@ -14,6 +13,8 @@ class RouteGenerator {
         return _getPageRoute(const OnboardingView());
       case Routes.signupViewRoute:
         return _getPageRoute(const SignUpView());
+      case Routes.loginViewRoute:
+        return _getPageRoute(const LoginView());
 
       default:
         return _getPageRoute(_errorPage());
