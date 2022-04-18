@@ -23,9 +23,15 @@ class TextStyles {
     fontSize: 14.sp,
     color: Palette.primaryColorLight,
   );
+
   static final bodyTextStyle = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 14.sp,
+    color: Palette.primaryColorDark,
+  );
+  static final mediumTextStyle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16.sp,
     color: Palette.primaryColorDark,
   );
 }

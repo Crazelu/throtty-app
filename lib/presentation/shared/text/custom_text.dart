@@ -65,6 +65,32 @@ class CustomText extends StatelessWidget {
     );
   }
 
+  factory CustomText.body({
+    required String text,
+    Color? color,
+    TextAlign? textAlign,
+  }) {
+    return CustomText(
+      text: text,
+      color: color,
+      textAlign: textAlign,
+      style: TextStyles.bodyTextStyle,
+    );
+  }
+
+  factory CustomText.medium({
+    required String text,
+    Color? color,
+    TextAlign? textAlign,
+  }) {
+    return CustomText(
+      text: text,
+      color: color,
+      textAlign: textAlign,
+      style: TextStyles.mediumTextStyle,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Text(

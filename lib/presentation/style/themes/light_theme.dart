@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:throtty/presentation/style/dimensions.dart';
 import 'package:throtty/presentation/style/palette.dart';
 
 ThemeData lightTheme(BuildContext context) => ThemeData(
@@ -15,7 +16,7 @@ ThemeData lightTheme(BuildContext context) => ThemeData(
       backgroundColor: Palette.primaryColorLight,
       scaffoldBackgroundColor: Palette.primaryColorLight,
       textSelectionTheme: const TextSelectionThemeData(
-        cursorColor: Palette.primaryColor,
+        cursorColor: Colors.black,
       ),
       colorScheme: const ColorScheme.light(
         secondary: Color(0xff63EA4D),
@@ -31,5 +32,45 @@ ThemeData lightTheme(BuildContext context) => ThemeData(
         ),
         iconTheme: const IconThemeData(color: Palette.primaryColorDark),
         actionsIconTheme: const IconThemeData(color: Palette.primaryColorDark),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Palette.fillColorLight,
+        hintStyle: TextStyle(
+          fontSize: 14.sp,
+          color: Palette.hintColorLight,
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith(
+            (states) => Palette.primaryColorLight,
+          ),
+          overlayColor: MaterialStateProperty.resolveWith(
+            (states) => Palette.primaryColor.withOpacity(.4),
+          ),
+          side: MaterialStateProperty.resolveWith(
+            (states) => const BorderSide(color: Palette.primaryColor),
+          ),
+          minimumSize: MaterialStateProperty.resolveWith(
+            (states) => Size(
+              Dimensions.mobileOutlinedButtonMinWidth.w,
+              Dimensions.mobileButtonHeight.h,
+            ),
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith(
+            (states) => Palette.primaryColor,
+          ),
+          minimumSize: MaterialStateProperty.resolveWith(
+            (states) => Size(
+              Dimensions.mobileButtonMinWidth.w,
+              Dimensions.mobileButtonHeight.h,
+            ),
+          ),
+        ),
       ),
     );
