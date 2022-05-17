@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:dartz/dartz.dart';
-import 'package:throtty/core/data/local/local_cache.dart';
+import 'package:throtty/core/domain/local/local_cache.dart';
 import 'package:throtty/core/di.dart';
-import 'package:throtty/core/models/api/error/api_error_response.dart';
-import 'package:throtty/core/models/api/server_response.dart';
+import 'package:throtty/core/domain/models/api/error/api_error_response.dart';
+import 'package:throtty/core/domain/models/api/server_response.dart';
 import 'package:http/http.dart' as http;
 import 'package:throtty/utils/parser_util.dart';
 

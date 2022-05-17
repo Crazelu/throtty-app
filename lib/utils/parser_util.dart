@@ -1,4 +1,4 @@
-import 'package:throtty/core/models/api/error/api_error_type.dart';
+import 'package:throtty/core/domain/models/api/error/api_error_type.dart';
 import 'package:throtty/utils/logger.dart';
 
 class ParserUtil<T> {

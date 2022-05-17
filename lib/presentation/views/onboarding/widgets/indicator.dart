@@ -22,8 +22,8 @@ class Indicator extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 4.w,
-            bottom: 4.h,
+            left: 6.w,
+            bottom: 6.h,
             child: StepArc(index: index),
           ),
           Positioned(

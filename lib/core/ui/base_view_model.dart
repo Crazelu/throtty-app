@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:throtty/core/di.dart';
-import 'package:throtty/handlers/handlers.dart';
+import 'package:throtty/presentation/handlers/handlers.dart';
 import 'package:throtty/utils/utils.dart';
 
 ///Base view model with shared dependencies injected.

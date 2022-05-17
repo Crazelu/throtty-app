@@ -1,16 +1,16 @@
-import 'package:throtty/core/data/local/__local.dart';
+import 'package:throtty/core/domain/local/local_cache.dart';
 
-abstract class AppDefaultsDomain {
+abstract class AppDefaultsStore {
   bool isOnboardingComplete();
   Future<void> completeOnboarding();
 }
 
-class AppDefaultsDomainImpl implements AppDefaultsDomain {
+class AppDefaultsStoreImpl implements AppDefaultsStore {
   final LocalCache cache;
 
   static const _onboardingStatusKey = "onboarding_status_key";
 
-  AppDefaultsDomainImpl(this.cache);
+  AppDefaultsStoreImpl(this.cache);
 
   @override
   Future<void> completeOnboarding() async {

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:throtty/core/models/api/error/api_error_response.dart';
+import 'package:throtty/core/domain/models/api/error/api_error_response.dart';
 import 'package:throtty/utils/parser_util.dart';
 
 abstract class ServerResponse {}

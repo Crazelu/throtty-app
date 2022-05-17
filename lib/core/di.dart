@@ -2,7 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:throtty/core/data/local/__local.dart';
 import 'package:throtty/core/domain/__domains.dart';
-import 'package:throtty/handlers/handlers.dart';
+import 'package:throtty/presentation/handlers/handlers.dart';
 
 GetIt locator = GetIt.instance;
 
@@ -25,8 +25,8 @@ Future<void> setupLocator({String baseApi = ''}) async {
   );
 
   //DOMAINS
-  locator.registerLazySingleton<AppDefaultsDomain>(
-    () => AppDefaultsDomainImpl(
+  locator.registerLazySingleton<AppDefaultsStore>(
+    () => AppDefaultsStoreImpl(
       locator(),
     ),
   );
